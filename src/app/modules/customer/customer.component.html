@@ -1,0 +1,33 @@
+<div class="cliente">
+  <div class="title">
+    <h1>Lista</h1>
+  </div>
+  <div class="cliente-lista">
+    <h2>Lista de Cliente</h2>
+    <div class="busca-cliente">
+      <label for="nome-cliente">Nome do cliente</label>
+      <app-input
+        placeholder="Digite seu nome"
+        (input)="onFilter($event)"
+      ></app-input>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>CPF</th>
+          <th>Criado em</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of filteredCustomers">
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.email }}</td>
+          <td>{{ customer.cpf }}</td>
+          <td>{{ customer.createAt | date : "dd/MM/yyyy" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

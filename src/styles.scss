@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --bs-blue: #0a0a3c;
+  --bs-gray: #d9d9d9;
+  --bs-gray-opaque: rgba(217, 217, 217, 0.5);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+main {
+  padding-bottom: 70px;
+}

@@ -1,0 +1,113 @@
+$title-font: "Koh Santepheap", sans-serif;
+$main-color: #377dc0;
+$hover-bg-color: #555;
+$button-bg-color: #333;
+$button-hover-bg-color: #3e64af;
+$border-color: #77a7d4;
+$border-bottom-color: #eef3f7;
+
+.title {
+  height: 137px;
+  background-color: var(--bs-gray-opaque);
+  display: flex;
+  align-items: center;
+  padding-left: 250px;
+
+  h1 {
+    font-family: $title-font;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: #000000;
+  }
+}
+
+.busca-cliente {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+  label {
+    margin-right: 10px;
+    font-family: $title-font;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.cliente-lista {
+  height: 100%;
+  margin: 0 250px;
+
+  h2 {
+    font-family: $title-font;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: $main-color;
+    border-bottom: 3px solid $border-bottom-color;
+    padding-bottom: 20px;
+  }
+
+  table {
+    margin-top: 30px;
+  }
+}
+
+app-input {
+  width: 100%;
+  padding-top: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    border: 1px solid $border-color;
+    text-align: left;
+    padding: 10px;
+    font-family: $title-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+  }
+}
+
+.btn-add {
+  float: right;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: $button-bg-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+}
+
+button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: #5c85d6;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-hover-bg-color;
+  }
+}

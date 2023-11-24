@@ -1,0 +1,143 @@
+@import "../../../../../assets/scss/foundation.scss";
+
+.title {
+  height: 137px;
+  background-color: var(--bs-gray-opaque);
+  display: flex;
+  align-items: center;
+  padding-left: 250px;
+  margin-bottom: 40px;
+
+  h1 {
+    font-family: $font-family;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: right;
+    color: #000;
+  }
+}
+
+app-input {
+  width: 100%;
+}
+
+.item__wraper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.customer__container {
+  height: 100%;
+  margin: 0 250px;
+
+  h2 {
+    font-family: $font-family;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: $main-color;
+    border-bottom: 3px solid $border-bottom-color;
+    padding-bottom: 20px;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.busca-cliente {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+  label {
+    font-family: $font-family;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-right: 10px;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+span {
+  font-family: $font-family;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.error-message {
+  color: $color-error;
+  font-size: 0.8em;
+  margin-top: 0.25rem;
+}
+
+.custom-hr {
+  border: none;
+  height: 3px;
+  background-color: $border-bottom-color;
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  th,
+  td {
+    border: 1px solid $border-color;
+    text-align: left;
+    padding: 10px;
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
+}
+
+button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: $main-color;
+  color: $color-button-text;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($main-color, 15%);
+  }
+}
+
+.btn-add {
+  font-family: $font-family;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: left;
+  width: 326px;
+  height: 58px;
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+}

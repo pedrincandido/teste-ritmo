@@ -1,0 +1,203 @@
+<div class="customer">
+  <div class="title">
+    <h1>Cadastro</h1>
+  </div>
+  <div class="customer__container">
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <div class="item">
+        <label for="nome-cliente">Nome</label>
+        <app-input
+          placeholder="Digite seu nome"
+          formControlName="name"
+        ></app-input>
+        <div
+          *ngIf="form.get('name')?.touched && form.get('name')?.invalid"
+          class="error-message"
+        >
+          O nome é obrigatório.
+        </div>
+      </div>
+      <div class="item">
+        <label for="nome-cliente">E-mail</label>
+        <app-input
+          placeholder="Digite seu melhor e-mail"
+          formControlName="email"
+        ></app-input>
+        <div
+          *ngIf="form.get('email')?.touched && form.get('email')?.invalid"
+          class="error-message"
+        >
+          O email é obrigatório.
+        </div>
+      </div>
+      <div class="item">
+        <label for="nome-cliente">CPF</label>
+        <app-input
+          placeholder="Digite CPF aqui"
+          formControlName="cpf"
+        ></app-input>
+        <div
+          *ngIf="form.get('email')?.touched && form.get('email')?.invalid"
+          class="error-message"
+        >
+          O email é obrigatório.
+        </div>
+      </div>
+      <div class="item__wraper">
+        <div>
+          <label for="nome-cliente">Endereço</label>
+          <app-input
+            placeholder="Digite endereço"
+            formControlName="address"
+          ></app-input>
+          <div
+            *ngIf="form.get('address')?.touched && form.get('address')?.invalid"
+            class="error-message"
+          >
+            O endereço é obrigatório.
+          </div>
+        </div>
+
+        <div>
+          <label for="nome-cliente">Estado</label>
+          <app-select
+            [options]="selectOptionsState"
+            formControlName="state"
+          ></app-select>
+          <div
+            *ngIf="form.get('state')?.touched && form.get('state')?.invalid"
+            class="error-message"
+          >
+            O state é obrigatório.
+          </div>
+        </div>
+      </div>
+
+      <div class="item__wraper mt-1">
+        <div>
+          <label for="nome-cliente">Cep</label>
+          <app-input
+            formControlName="cep"
+            placeholder="00.000 - 000"
+          ></app-input>
+          <div
+            *ngIf="form.get('cep')?.touched && form.get('cep')?.invalid"
+            class="error-message"
+          >
+            O cep é obrigatório.
+          </div>
+        </div>
+
+        <div>
+          <label for="nome-cliente">Cidade</label>
+          <app-select
+            [options]="selectOptionsCity"
+            formControlName="city"
+          ></app-select>
+          <div
+            *ngIf="form.get('city')?.touched && form.get('city')?.invalid"
+            class="error-message"
+          >
+            O city é obrigatório.
+          </div>
+        </div>
+      </div>
+
+      <h2>Forma de Pagamento</h2>
+
+      <app-radio-button
+        [options]="radioOptions"
+        name="paymentMethod"
+        formControlName="selectedRadioOption"
+      >
+      </app-radio-button>
+
+      <div class="item__wraper mt-1">
+        <div>
+          <label for="nome-cliente">Nome do Cartão</label>
+          <app-input
+            placeholder="Nome impresso no cartão"
+            formControlName="holderName"
+          ></app-input>
+          <div
+            *ngIf="
+              form.get('holderName')?.touched && form.get('holderName')?.invalid
+            "
+            class="error-message"
+          >
+            O Nome do Cartão é obrigatório.
+          </div>
+        </div>
+
+        <div>
+          <label for="nome-cliente">Data de Expiração</label>
+
+          <div class="card">
+            <div>
+              <app-select
+                [options]="selectOptionsMonth"
+                formControlName="month"
+                placeholder="Mês"
+              ></app-select>
+              <div
+                *ngIf="form.get('month')?.touched && form.get('month')?.invalid"
+                class="error-message"
+              >
+                O Mês do Cartão é obrigatório.
+              </div>
+            </div>
+
+            <div>
+              <app-select
+                [options]="selectOptionsYear"
+                placeholder="Ano"
+                formControlName="year"
+              ></app-select>
+              <div
+                *ngIf="form.get('year')?.touched && form.get('year')?.invalid"
+                class="error-message"
+              >
+                O Ano do Cartão é obrigatório.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item mt-3">
+        <label for="nome-cliente">Número do Cartão</label>
+        <app-input
+          placeholder="0000 0000 0000 0000"
+          formControlName="cardNumber"
+        ></app-input>
+        <div
+          *ngIf="
+            form.get('cardNumber')?.touched && form.get('cardNumber')?.invalid
+          "
+          class="error-message"
+        >
+          O Número do Cartão é obrigatório.
+        </div>
+      </div>
+
+      <div class="item">
+        <label for="nome-cliente">Código de Segurança</label>
+        <app-input placeholder="XXX" formControlName="cvv"></app-input>
+        <div
+          *ngIf="form.get('cvv')?.touched && form.get('cvv')?.invalid"
+          class="error-message"
+        >
+          O cvv é obrigatório.
+        </div>
+
+        <hr class="custom-hr" />
+      </div>
+
+      <div class="item">
+        <label for="nome-cliente">Seu cartão será debitado em R$ 49,00</label>
+
+        <button type="submit" class="btn-add mt-1">REALIZAR MATRÍCULA</button>
+      </div>
+    </form>
+  </div>
+</div>

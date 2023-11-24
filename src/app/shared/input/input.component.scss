@@ -1,0 +1,23 @@
+input {
+  height: 50px;
+  margin: 5px 0 0 0 !important;
+  border: none;
+  padding: 14px;
+  background-color: var(--bs-gray);
+  width: 100%;
+  border-radius: 3px;
+  opacity: 50%;
+  box-sizing: border-box;
+
+  &::-webkit-input-placeholder {
+    font-family: Koh Santepheap;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

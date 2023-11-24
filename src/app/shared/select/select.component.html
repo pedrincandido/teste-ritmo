@@ -1,0 +1,6 @@
+<select (change)="onChangeValue($event)" [value]="value">
+  <option value="" disabled selected>Selecione uma opção</option>
+  <option *ngFor="let option of options" [value]="option.value">
+    {{ option.viewValue }}
+  </option>
+</select>
